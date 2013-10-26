@@ -4637,4 +4637,8 @@ tier: "Illegal"
 		dreamWorldRelease: true,
 		tier: "Uber"
 	},
+	wirier: {viableMoves: {"earthquake":1,"headsmash":1,"swordsdance":1,"uturn":1,"spikes":1},
+		dreamWorldRelease: true,
+		tier: "RU"
+	}
 };

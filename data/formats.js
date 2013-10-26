@@ -270,18 +270,6 @@ exports.BattleFormats = {
                         }
                 }
         },
-        ne: {
-                effectType: 'Rule',
-                validateSet: function(set) {
-                        var template = this.getTemplate(set.species || set.name);
-                        if (template.prevo) {
-                                return [set.species+" did evolve to this."];
-                        }
-                        if (!template.evo) {
-                                return [set.species+" does evolve into better Pokemon."];
-                        }
-                }
-        },
         notfullyevolved: {
                effectType: 'Rule',
                validateSet: function(set) {

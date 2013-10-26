@@ -1,8 +1,13 @@
 [
 {"title":"Lobby","autojoin":true},
-{"title":"Staff","isPrivate":true,"staffRoom":true,"staffAutojoin":true},
+{"title":"Staff","isPrivate":true,"staffRoom":true,"staffAutojoin":true,"auth":{"snaquaza":"+","namin":"%","spartanmalice":"%","celever":"%","anty208":"+","hdow":"+","snaquille":"%"}},
 {"title":"mafia"},
-{"title":"frt","isPrivate":true},
-{"title":"GangBang","auth":{"namin3snaq":"#"},"isPrivate":true},
-{"title":"Spam","isPrivate":true}
+{"title":"Spam","isPrivate":true,"auth":{"erzavserza":"#","snaquaza":"+","anty208":"%"}},
+{"title":"Haxmons","isPrivate":true},
+{"title":"Tervari Olympics","auth":{"firehound":"#","snaquaza":"%","namin":"+","snaquille":"%","anty208":"+","hdow":"+"}},
+{"title":"Silver","isPrivate":true},
+{"title":"Aurora","isPrivate":true},
+{"title":"Spheal Hole","isPrivate":true,"auth":{"sphel":"#","aurr":"#"}},
+{"title":"InsecureTeenageBirds","isPrivate":true},
+{"title":"EneomasFetishes","auth":{"eneomas":"#","meloett":"%","anty208":"+"}}
 ]

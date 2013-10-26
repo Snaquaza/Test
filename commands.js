@@ -209,6 +209,7 @@ for (var i in Rooms.rooms) {
 var crypto = require('crypto');
 var poofeh = true;
 var canpet = true;
+var candead = true;
 var canbs = true;
 var canhi = true;
 var rockpaperscissors  = false;
@@ -1159,6 +1160,46 @@ viewround: 'vr',
 				return this.sendReply('You cannot use this command because you are muted.');
 			}
         		this.add(user.name + ' pets ' + targetUser.name + '.');
+		}
+        	},
+	deadon: function(target, room, user) {
+		if(!user.can('ban')) {
+			return this.sendReply('You do not have the authority to use this command.');
+		}
+		else {
+			if(candead == true) {
+				return this.sendReply('/dead is already on.');
+			}
+			if(candead == false) {
+				this.sendReply('You turned on /dead.');
+				candead = true;
+			}
+		}
+		},
+
+	deadoff: function(target, room, user) {
+		if(!user.can('ban')){
+			return this.sendReply('you do not have the authority to use this command.');
+		}
+		else {
+			if(candead == false) {
+			return this.sendReply('/dead is already off.');
+		}
+			if(candead == true) {
+				this.sendReply('You turned off /dead.');
+				candead = false;
+			}
+		}
+		},
+
+	dead: function(target, room, user) {
+		if(candead == false) {
+			return this.sendReply('/dead is currently off.');
+		}
+		if(candead == true && user.can('broadcast')) {
+        		if (!target) {
+        		this.add(user.name + 'is dead' + '.');
+			}
 		}
         	},
 

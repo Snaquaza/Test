@@ -824,7 +824,7 @@ shop: function(target, room, user) {
 	rules: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('Please follow the rules:<br />' +
-			'- <a href="https://docs.google.com/document/d/1uQRrVIcenD_69xfBp5YMYlqB6BJtRAN7kp83mkOtUKY/edit?usp=sharing">Rules</a><br />' +
+			'- <a href="https://docs.google.com/document/d/12-Y_GF9OzTDOjBQFq5TnTXhPxkNeRTIoXc6Zh9w_ZcI/pub">Rules</a><br />' +
 			'</div>');
 	},
 
@@ -1264,7 +1264,7 @@ capv2: 'capv2',
 			matched = true;
 			this.sendReply('/demote [username], [group] - Demotes the user to the specified group or previous ranked group. Requires: & ~');
 		}
-		if (target === '~' || target === 'forcerenameto' || target === 'frt') {
+		if (target === '&' || target === 'forcerenameto' || target === 'frt') {
 			matched = true;
 			this.sendReply('/forcerenameto OR /frt [username] - Force a user to choose a new name. Requires: & ~');
 			this.sendReply('/forcerenameto OR /frt [username], [new name] - Forcibly change a user\'s name to [new name]. Requires: & ~');

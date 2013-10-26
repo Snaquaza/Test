@@ -143,53 +143,6 @@ exports.Formats = [
 		// no restrictions, for serious
 		ruleset: [],
 	}, 
-	{
-		name: "GBU Singles",
-		section: "Singles",
-		
-		validateSet: function(set) {
-			if (!set.level || set.level >= 50) set.forcedLevel = 50;
-			return [];
-		},
-		onBegin: function() {
-			this.debug('cutting down to 3');
-			this.p1.pokemon = this.p1.pokemon.slice(0,3);
-			this.p1.pokemonLeft = this.p1.pokemon.length;
-			this.p2.pokemon = this.p2.pokemon.slice(0,3);
-			this.p2.pokemonLeft = this.p2.pokemon.length;
-		},
-		ruleset: ['Pokemon', 'Species Clause', 'Item Clause', 'Team Preview GBU'],
-		banlist: ['Unreleased', 'Illegal', 'Sky Drop', 'Dark Void', 'Soul Dew',
-		'Mewtwo', 'Mew', 'Lugia', 'Ho-Oh', 'Celebi', 'Kyogre', 'Groudon',
-		'Rayquaza', 'Jirachi', 'Deoxys', 'Deoxys-Attack', 'Deoxys-Speed', 'Deoxys-Defense',
-		'Chatot', 'Dialga', 'Palkia', 'Giratina', 'Giratina-Origin', 'Phione',
-		'Manaphy', 'Darkrai', 'Shaymin', 'Shaymin-Sky',
-		'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fighting', 'Arceus-Fire',
-		'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus-Poison',
-		'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
-		'Victini', 'Reshiram', 'Zekrom', 'Kyurem', 'Kyurem-Black', 'Kyurem-White',
-		'Keldeo', 'Keldeo-Resolute', 'Meloetta', 'Genesect'
-		]
-	},
-	{
-		name: "Global Showdown",
-		section: "Singles",
-		
-		validateSet: function(set) {
-			if (!set.level || set.level >= 50) set.forcedLevel = 50;
-			return [];
-		},
-		onBegin: function() {
-			this.debug('cutting down to 3');
-			this.p1.pokemon = this.p1.pokemon.slice(0,3);
-			this.p1.pokemonLeft = this.p1.pokemon.length;
-			this.p2.pokemon = this.p2.pokemon.slice(0,3);
-			this.p2.pokemonLeft = this.p2.pokemon.length;
-		},
-		ruleset: ['Pokemon', 'Species Clause', 'Item Clause', 'Team Preview GBU'],
-		banlist: ['Unreleased', 'Illegal', 'Sky Drop', 'Dark Void', 'Soul Dew', 'Chatot']
-	}, 
-
 
 ////////////////Tervari Tiers
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -232,7 +185,7 @@ exports.Formats = [
                 section: "Tervari Tiers",
 
                 mod: 'tervari',
-                ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+                ruleset: ['Standard', 'Evasion Abilities Clause', 'Team Preview'],
                 banlist: ['Uber']        
         },
         {
@@ -240,7 +193,7 @@ exports.Formats = [
                 section: "Tervari Tiers",
 
                 mod: 'tervari',
-                ruleset: ['Pokemon', 'Team Preview', 'Sleep Clause Mod', 'Standard Ubers'],
+                ruleset: ['Team Preview', 'Sleep Clause Mod', 'Standard Ubers'],
                 banlist: []
         },
         {
@@ -292,17 +245,7 @@ exports.Formats = [
                 ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
                 banlist: ['Sonicboom', 'Dragon Rage', 'Berry Juice', 'Carvanha', 'Meditite', 'Gligar', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma', 'Soul Dew']
         },
-        {
-		name: "Tervari Custom Game",
-		section: "Tervari Tiers",
-		
-		mod: 'tervari',
-		canUseRandomTeam: true,
-		maxLevel: 1099511627775,
-		defaultLevel: 100,
-		// no restrictions, for serious (other than team preview)
-		ruleset: ['Team Preview']
-	}, 
+
         {
                 name: "Tervari Doubles",
                 section: "Tervari Double Tiers",
@@ -697,7 +640,7 @@ exports.Formats = [
       // haxmonsdoubles: {
         //        name: "Double Haxmons",
           //      section: "Other Metagames",
-	//	gametype: 'doubles',
+	//	 gametype: 'doubles',
           //      effectType: 'Format',
             //    rated: true,
               //  challengeShow: true,
@@ -708,7 +651,7 @@ exports.Formats = [
       //  },
 	{
 		name: "Uber Haxmons",
-		section: "Singles",
+		section: "Other Metagames",
 
 		ruleset: ['Pokemon', 'Team Preview', 'Standard Ubers'],
 		banlist: ['Kings Rock', 'Razor Claw']
@@ -739,14 +682,6 @@ exports.Formats = [
                 ruleset: ['No Hax Clause', 'PotD', 'Pokemon', 'Sleep Clause Mod', 'HP Percentage Mod']
 	},
         {
-                name: "Gen-NEXT OU",
-                section: "Other Metagames",
-
-                mod: 'gennext',
-                ruleset: ['Pokemon', 'Standard NEXT', 'Team Preview'],
-                banlist: ['Uber']
-        },
-        {
                 name: "OU Monotype",
                 section: "Other Metagames",
 
@@ -761,29 +696,29 @@ exports.Formats = [
                 banlist: ['Illegal', 'Unreleased'],
                 mimicGlitch: true
         },
-        {
-                name: "LC Ubers",
-                section: "Other Metagames",
+//        {
+  //              name: "LC Ubers",
+    //            section: "Other Metagames",
 
-                maxLevel: 5,
-                ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
-                banlist: ['Sonicboom', 'Dragon Rage', 'Berry Juice', 'Soul Dew']
-        },
-        {
-                name: "LC UU",
-                section: "Other Metagames",
+//                maxLevel: 5,
+  //              ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
+    //            banlist: ['Sonicboom', 'Dragon Rage', 'Berry Juice', 'Soul Dew']
+      //  },
+//        {
+  //              name: "LC UU",
+    //            section: "Other Metagames",
 
-                maxLevel: 5,
-                ruleset: ['LC'],
-                banlist: ['Abra', 'Aipom', 'Archen', 'Axew', 'Bronzor', 'Chinchou', 'Clamperl', 'Cottonee', 'Cranidos', 'Croagunk', 'Diglett', 'Drifloon', 'Drilbur', 'Dwebble', 'Ferroseed', 'Foongus', 'Frillish', 'Gastly', 'Hippopotas', 'Houndour', 'Koffing', 'Larvesta', 'Lileep', 'Machop', 'Magnemite', 'Mienfoo', 'Misdreavus', 'Munchlax', 'Murkrow', 'Pawniard', 'Ponyta', 'Porygon', 'Riolu', 'Sandshrew', 'Scraggy', 'Shellder', 'Shroomish', 'Slowpoke', 'Snover', 'Staryu', 'Tentacool', 'Timburr', 'Tirtouga']
-        },
-        {
-                name: "Dream World",
-                section: "Other Metagames",
+      //          maxLevel: 5,
+        //        ruleset: ['LC'],
+          //      banlist: ['Abra', 'Aipom', 'Archen', 'Axew', 'Bronzor', 'Chinchou', 'Clamperl', 'Cottonee', 'Cranidos', 'Croagunk', 'Diglett', 'Drifloon', 'Drilbur', 'Dwebble', 'Ferroseed', 'Foongus', 'Frillish', 'Gastly', 'Hippopotas', 'Houndour', 'Koffing', 'Larvesta', 'Lileep', 'Machop', 'Magnemite', 'Mienfoo', 'Misdreavus', 'Munchlax', 'Murkrow', 'Pawniard', 'Ponyta', 'Porygon', 'Riolu', 'Sandshrew', 'Scraggy', 'Shellder', 'Shroomish', 'Slowpoke', 'Snover', 'Staryu', 'Tentacool', 'Timburr', 'Tirtouga']
+    //    },
+      //  {
+        //        name: "Dream World",
+          //      section: "Other Metagames",
  
-                ruleset: ['Pokemon', 'Standard DW', 'Team Preview'],
-                banlist: []
-        },
+   //             ruleset: ['Pokemon', 'Standard DW', 'Team Preview'],
+     //           banlist: []
+  //      },
         {
                 name: "Tier Shift",
                 section: "Other Metagames",
@@ -930,14 +865,6 @@ exports.Formats = [
               //  ruleset: ['Pokemon', 'Standard', 'Team Preview'],
                 //banlist: ['Sonicboom', 'Dragon Rage', 'Berry Juice', 'Drought']
  //       },
-
-       {
-                name: "NE",
-                section: "Other Metagames",
-
-                ruleset: ['Pokemon', 'Standard', 'Team Preview', 'NE'],
-                banlist: ['Soul Dew']
-        },
 	{
 		name: "Type-Swap",
 		section: "Other Metagames",
