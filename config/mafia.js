@@ -2,7 +2,7 @@
   * Mafia Variables *************************************************************************
   ******************************************************************************************/
  
-var mGame = exports.mGame = false;
+global.mGame = exports.mGame = false;
 var mGameStarting = false;
 var mDayTime = false;
 var mNightTime = exports.mNightTime = false;
